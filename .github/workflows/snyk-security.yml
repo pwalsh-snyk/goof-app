@@ -1,4 +1,3 @@
-
 name: Snyk Security
 
 on:
@@ -29,7 +28,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Snyk Open Source monitor
         run: |
-          snyk auth ${{ secrets.SNYK_AUTH_TOKEN }}
+          snyk auth cd15dd33-ed9c-40f7-98c1-69d49fcd17f1
           snyk monitor --all-projects
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
